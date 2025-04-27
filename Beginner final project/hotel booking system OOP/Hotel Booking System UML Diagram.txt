@@ -1,0 +1,100 @@
+@startuml
+' Hotel Booking System UML Class Diagram
+
+' Classes
+class Hotel {
+  -hotelID: int
+  -name: string
+  -location: string
+  -rating: float
+  +addRoom(room: Room): void
+  +getAvailableRooms(checkIn: Date, checkOut: Date): Room[]
+  +getHotelDetails(): string
+}
+
+class Room {
+  -roomID: int
+  -roomNumber: string
+  -type: RoomType
+  -pricePerNight: double
+  -isAvailable: boolean
+  +checkAvailability(checkIn: Date, checkOut: Date): boolean
+  +bookRoom(booking: Booking): void
+  +getRoomDetails(): string
+}
+
+class Booking {
+  -bookingID: int
+  -customer: Customer
+  -room: Room
+  -checkInDate: Date
+  -checkOutDate: Date
+  -totalPrice: double
+  -status: BookingStatus
+  +confirmBooking(): boolean
+  +cancelBooking(): boolean
+  +calculateTotalPrice(): double
+}
+
+class Customer {
+  -customerID: int
+  -firstName: string
+  -lastName: string
+  -email: string
+  -phone: string
+  +makeBooking(room: Room, checkIn: Date, checkOut: Date): Booking
+  +viewBookingHistory(): Booking[]
+  +updateProfile(details: CustomerDetails): void
+}
+
+class Payment {
+  -paymentID: int
+  -booking: Booking
+  -amount: double
+  -paymentDate: Date
+  -paymentMethod: PaymentMethod
+  -status: PaymentStatus
+  +processPayment(): boolean
+  +refundPayment(): boolean
+}
+
+' Enumerations
+enum RoomType {
+  SINGLE
+  DOUBLE
+  SUITE
+  DELUXE
+}
+
+enum BookingStatus {
+  PENDING
+  CONFIRMED
+  CANCELLED
+  COMPLETED
+}
+
+enum PaymentMethod {
+  CREDIT_CARD
+  DEBIT_CARD
+  CASH
+  ONLINE_TRANSFER
+}
+
+enum PaymentStatus {
+  PENDING
+  COMPLETED
+  FAILED
+  REFUNDED
+}
+
+' Relationships
+Hotel "1" -- "0..*" Room : contains
+Customer "1" -- "0..*" Booking : makes
+Booking "1" -- "1" Room : reserves
+Booking "1" -- "1" Payment : has
+RoomType "1" -- "1" Room : classifies
+BookingStatus "1" -- "1" Booking : defines
+PaymentMethod "1" -- "1" Payment : specifies
+PaymentStatus "1" -- "1" Payment : defines
+
+@enduml
