@@ -50,10 +50,10 @@ The app uses the Provider pattern for state management. The main components incl
 - Various widgets for different sections of the UI (photo display, details, color selection)
 
 ## Screenshots
-![Screenshot_20250426-133948](https://github.com/user-attachments/assets/a2ab8888-e7a5-467a-8dee-6a23d0c169e7)
+<div style="display: flex; flex-direction: row; gap: 10px;">
+  <img src="https://github.com/user-attachments/assets/a2ab8888-e7a5-467a-8dee-6a23d0c169e7" alt="Screenshot 1" width="200"/>
+  <img src="https://github.com/user-attachments/assets/81340794-e7b4-4cbf-bb39-caf57432fa72" alt="Screenshot 2" width="200"/>
+  <img src="https://github.com/user-attachments/assets/ccb9ba07-d742-4121-a1b0-2384f5e990bf" alt="Screenshot 3" width="200"/>
+  <img src="https://github.com/user-attachments/assets/6cc753c2-6bf2-431d-aa3a-6590cef542b4" alt="Screenshot 4" width="200"/>
+</div>
 
-![Screenshot_20250426-133958](https://github.com/user-attachments/assets/81340794-e7b4-4cbf-bb39-caf57432fa72)
-
-![Screenshot_20250426-134008](https://github.com/user-attachments/assets/ccb9ba07-d742-4121-a1b0-2384f5e990bf)
-
-![Screenshot_20250426-134013](https://github.com/user-attachments/assets/6cc753c2-6bf2-431d-aa3a-6590cef542b4)
