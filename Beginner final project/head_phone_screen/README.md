@@ -6,7 +6,7 @@ A Flutter application that showcases different headphone models with color selec
 
 - Interactive headphone display with multiple view angles (front, cover, side)
 - Color selection for headphones (Black, Brown, Silver)
-- Favorite toggle functionality
+- Favourite toggle functionality
 - Product details display
 - Clean and responsive UI design
 
@@ -45,13 +45,15 @@ lib/
 
 The app uses the Provider pattern for state management. The main components include:
 
-- `HeadphoneProvider`: Manages the state for color selection, view angles, and favorite status
+- `HeadphoneProvider`: Manages the state for color selection, view angles, and favourite status
 - `HeadPhoneScreen`: Main screen that displays the product
 - Various widgets for different sections of the UI (photo display, details, color selection)
 
 ## Screenshots
+![Screenshot_20250426-133948](https://github.com/user-attachments/assets/a2ab8888-e7a5-467a-8dee-6a23d0c169e7)
 
-Screenshot_20250426-133948.png
-Screenshot_20250426-133958.png
-Screenshot_20250426-134008.png
-Screenshot_20250426-134013.png
+![Screenshot_20250426-133958](https://github.com/user-attachments/assets/81340794-e7b4-4cbf-bb39-caf57432fa72)
+
+![Screenshot_20250426-134008](https://github.com/user-attachments/assets/ccb9ba07-d742-4121-a1b0-2384f5e990bf)
+
+![Screenshot_20250426-134013](https://github.com/user-attachments/assets/6cc753c2-6bf2-431d-aa3a-6590cef542b4)
